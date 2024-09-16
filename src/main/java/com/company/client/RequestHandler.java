@@ -4,23 +4,38 @@ import com.company.models.Student;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
 public class RequestHandler {
 
     public static String handleGetRequest() throws JsonProcessingException {
         try {
             Student student = new Student();
-
-            // Convert the student object to JSON using Jackson
             ObjectMapper objectMapper = new ObjectMapper();
-            String jsonResponse = objectMapper.writeValueAsString(student);
 
-            // Create the HTTP response with the JSON content
-            String response = "HTTP/1.1 200 OK\r\n" +
-                    "Content-Type: application/json\r\n" +
-                    "Content-Length: " + jsonResponse.length() + "\r\n\r\n" +
-                    jsonResponse;
+            InputStream inputStream = RequestHandler.class.getClassLoader().getResourceAsStream("data.json");
+            if (inputStream != null) {
+                byte[] jsonData = inputStream.readAllBytes();
+                String jsonResponse = new String(jsonData, StandardCharsets.UTF_8);
 
-            return response;
+                // Create the HTTP response with the JSON content
+                String response = "HTTP/1.1 200 OK\r\n" +
+                        "Content-Type: application/json\r\n" +
+                        "Content-Length: " + jsonResponse.length() + "\r\n\r\n" +
+                        jsonResponse;
+
+                return response;
+
+            } else {
+                throw new FileNotFoundException("File not found in resources: data.json");
+            }
+
+
         } catch (Exception e) {
             e.printStackTrace();
             return "HTTP/1.1 500 Internal Server Error\r\n\r\n";

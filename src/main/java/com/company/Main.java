@@ -10,8 +10,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        ServerSocket serverSocket = new ServerSocket(8080);
-        System.out.println("Server started on port : 8080");
+        ServerSocket serverSocket = new ServerSocket(9090);
+        System.out.println("Server started on port : 9090");
 
         while (true) {
             try (Socket clientSocket = serverSocket.accept()) {

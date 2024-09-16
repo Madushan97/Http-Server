@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "name": "nipuna",
+    "address": "kuruwita",
+    "phone": "+94 71 889 51 81",
+    "gender": "male"
+  },
+  {
+    "id": 2,
+    "name": "kamal",
+    "address": "colombo",
+    "phone": "+94 71 889 52 82",
+    "gender": "male"
+  },
+  {
+    "id": 3,
+    "name": "nimal",
+    "address": "kandy",
+    "phone": "+94 71 889 53 83",
+    "gender": "male"
+  },
+  {
+    "id": 4,
+    "name": "sunil",
+    "address": "galle",
+    "phone": "+94 71 889 54 84",
+    "gender": "male"
+  },
+  {
+    "id": 5,
+    "name": "sanduni",
+    "address": "jaffna",
+    "phone": "+94 71 889 55 85",
+    "gender": "female"
+  },
+  {
+    "id": 6,
+    "name": "hiruni",
+    "address": "kurunegala",
+    "phone": "+94 71 889 56 86",
+    "gender": "female"
+  },
+  {
+    "id": 7,
+    "name": "rajitha",
+    "address": "badulla",
+    "phone": "+94 71 889 57 87",
+    "gender": "male"
+  },
+  {
+    "id": 8,
+    "name": "kavindu",
+    "address": "anuradhapura",
+    "phone": "+94 71 889 58 88",
+    "gender": "male"
+  },
+  {
+    "id": 9,
+    "name": "tharindu",
+    "address": "trincomalee",
+    "phone": "+94 71 889 59 89",
+    "gender": "male"
+  },
+  {
+    "id": 10,
+    "name": "kasun",
+    "address": "ratnapura",
+    "phone": "+94 71 889 60 90",
